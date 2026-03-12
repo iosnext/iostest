@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Next Install</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/round.png" />
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        App Store
+      </div>
+      <div class="safe-row">
+        <div class="safe-live"><span class="dot"></span>SAFE</div>
+      </div>
+    </div>
+
+    <!-- Anti-Revoke DNS Card (Compact Style) -->
+    <div class="card"
+      style="margin-bottom: 2px; padding: 16px 22px; border-style: dashed; background: rgba(0, 122, 255, 0.03);">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div
+            style="width: 32px; height: 32px; background: #007aff; border-radius: 8px; display: grid; place-items: center; color: white; font-size: 14px;">
+            🛡️</div>
+          <div>
+            <div style="font-weight: 700; font-size: 14px; color: var(--text);">Anti-Revoke DNS</div>
+            <div style="font-size: 12px; color: var(--muted);">Install DNS to block Apple verification</div>
+          </div>
+        </div>
+        <a href="assets/config/Next-IOS.mobileconfig" class="get-button"
+          style="background: #eef1f7; color: #007aff; box-shadow: none; font-size: 12px; height: 32px; min-width: 70px;">SET
+          UP</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="app-row">
+        <div class="app-icon">
+          <img src="assets/images/helloworld-hw.png" alt="HelloWorld icon" />
+        </div>
+        <div class="app-info">
+          <h1>HelloWorld</h1>
+          <p class="subtitle">Certificate • Testing App</p>
+          <div class="meta">
+            <span>5.0 ★</span>
+            <span>All Age</span>
+            <span>0.1 MB</span>
+          </div>
+        </div>
+        <a id="test-install-link" class="get-button" href="#">
+          GET
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="app-row">
+        <div class="app-icon">
+          <img src="assets/images/bgmi.png" alt="BGMI icon" />
+        </div>
+        <div class="app-info">
+          <h1>BGMI - NEXT IOS</h1>
+          <p class="subtitle">Action • Online Multiplayer</p>
+          <div class="meta">
+            <span>4.7 ★</span>
+            <span>18+ Age</span>
+            <span>3.5 GB</span>
+          </div>
+        </div>
+        <a id="install-link" class="get-button" href="#">
+          GET
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <div class="card card-guide">
+      <div class="card-header">
+        <h2>How to Install</h2>
+        <span class="badge">Guide</span>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p class="step-text">
+            <span class="long">Tap the <strong>GET</strong> button above to start installation.</span>
+            <span class="short">Tap <strong>GET</strong> above to start.</span>
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p class="step-text">
+            <span class="long">A prompt will appear, tap <strong>Install</strong> and wait.</span>
+            <span class="short">Tap <strong>Install</strong> when prompted.</span>
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p class="step-text">
+            <span class="long">Go to <strong>Settings</strong> > <strong>General</strong> on your phone.</span>
+            <span class="short">Go to <strong>Settings</strong> > <strong>General</strong>.</span>
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <p class="step-text">
+            <span class="long">Tap <strong>VPN & Device Management</strong> (or Profiles).</span>
+            <span class="short">Tap <strong>VPN & Device Management</strong>.</span>
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <p class="step-text">
+            <span class="long">Find the enterprise profile and tap <strong>Trust</strong>.</span>
+            <span class="short">Find profile and tap <strong>Trust</strong>.</span>
+          </p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <p class="footnote">
+        <span class="long">Note: You must trust the developer profile in settings to launch the app after
+          installation.</span>
+        <span class="short">Note: Trust the developer profile in settings to launch the app.</span>
+      </p>
+    </div>
+
+  </div>
+  <script>
+    // Handle manifest URL
+    const manifestUrl = `${window.location.origin}/manifests/manifest.plist`;
+    const installUrl = `itms-services://?action=download-manifest&url=${manifestUrl}`;
+    document.getElementById("install-link").href = installUrl;
+
+    const testManifestUrl = `${window.location.origin}/manifests/manifest-test.plist`;
+    const testInstallUrl = `itms-services://?action=download-manifest&url=${testManifestUrl}`;
+    document.getElementById("test-install-link").href = testInstallUrl;
+
+  </script>
+</body>
+
+</html>

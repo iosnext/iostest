@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>DNSSettings</key>
+			<dict>
+				<key>DNSProtocol</key>
+				<string>HTTPS</string>
+				<key>ServerURL</key>
+				<string>https://dns.adguard-dns.com/dns-query</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Blocks Apple Revoke Servers to keep your apps working.</string>
+			<key>PayloadDisplayName</key>
+			<string>Anti-Revoke DNS (IPA Project)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.ipa.project.dns</string>
+			<key>PayloadType</key>
+			<string>com.apple.dnsSettings.managed</string>
+			<key>PayloadUUID</key>
+			<string>7B9A2F1C-D3E4-4F5G-H6H7-I8J9K0L1M2N3</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Anti-Revoke DNS Profile</string>
+	<key>PayloadIdentifier</key>
+	<string>com.ipa.project.config</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>A1B2C3D4-E5F6-4G5H-8I9J-K0L1M2N3O4P5</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
